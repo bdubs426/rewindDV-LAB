@@ -1,0 +1,43 @@
+ASFireWire
+Copyright 2024-2026 ASFireWire Project Contributors
+
+This product includes software developed as part of the ASFireWire
+project (https://github.com/mrmidi/ASFireWire).
+
+---
+
+The FWAddress structure in ASFWDriver/Async/AsyncTypes.hpp reproduces the
+public API layout of the FWAddress structure from Apple's IOFireWireFamily
+(IOFireWireFamilyCommon.h), published under the Apple Public Source
+License 2.0 (https://opensource.org/license/apsl-2-0), for API
+compatibility. No implementation code from IOFireWireFamily is included.
+
+Wire and bus behavior in this project has been validated against the
+following works, used strictly as behavioral references (no code copied):
+  - Linux kernel drivers/firewire and sound/firewire (GPL-2.0)
+  - Apple IOFireWireFamily, IOFireWireAVC, IOFireWireSBP2 (APSL-2.0)
+  - libffado (GPL-2.0/GPL-3.0)
+  - snd-firewire-ctl-services (GPL-3.0)
+
+---
+
+RewindDV downstream modifications, Copyright 2026 Rewind Digital.
+This is not an unmodified ASFireWire distribution and implies no endorsement.
+Retained upstream baseline: ac8a124a683d2f8201cd14ee0d2de8265e4834f0.
+Selective September 17, 2026 correctness changes derive from ASFireWire:
+  ac120258b0b83456d23e4cad82b56bb1a593339f (local IRM CSR reads)
+  9af4c12be4166a5082bee1cc218238bbc842fbe6 (local-root cycle master)
+  3ad56c1beb65f8bc6880f0212bebeb66ec6e2803 (IRM read retries and cleanup)
+RewindDV retains stronger route fencing and does not replay ambiguous mutating
+locks. Complete provenance and deviations are in Foundation/NOTICE.md and the
+Build172 upstream-hardening qualification report in the source distribution.
+The original Apache-2.0 license and notices are retained with this application.
+
+Selective September 22, 2026 hardening is informed by ASFireWire PRs #133/#135
+and commit 05026d625d1e5d2446ea037c66349d6ff2d65835, reviewed at
+df65d352c1b77a26d7fe7270ff9567b1cd781209. RewindDV adds a bounded, validated
+physical-path speed ceiling, generation-bound receive integration, precise
+resource-failure attribution and connection-transition evidence. Existing
+resource status numbers and uncertain-ownership safeguards remain intact.
+DV bandwidth arithmetic and the raw receive format are not replaced.
+No Linux implementation code or audio/SCSI personalities are added by this work.

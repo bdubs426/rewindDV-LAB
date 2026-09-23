@@ -1,0 +1,23 @@
+# Downloads hub only. Never add the private app repository, builds or captures.
+/*
+!/.gitignore
+!/README.md
+!/INSTALL.md
+!/UNINSTALL.md
+!/TEST-REPORT.md
+!/ACKNOWLEDGMENTS.md
+!/ASFireWire-LICENSE.txt
+!/ASFireWire-NOTICE.txt
+!/ThirdPartyNotices.txt
+!/PRIVACY.md
+!/RELEASE-NOTES.md
+!/assets/
+/assets/*
+!/assets/rewinddv-icon.png
+!/assets/sponsor-heading.svg
+!/.github/
+/.github/*
+!/.github/FUNDING.yml
+!/.github/ISSUE_TEMPLATE/
+/.github/ISSUE_TEMPLATE/*
+!/.github/ISSUE_TEMPLATE/test-report.md
