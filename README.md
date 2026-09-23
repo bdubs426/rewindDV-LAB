@@ -16,7 +16,7 @@
 > ### [![♥ Help fund IEC standards acquisition to further development](assets/sponsor-heading.svg)](https://ko-fi.com/rewinddv)
 > **[Sponsor rewindDV on Ko-fi →](https://ko-fi.com/rewinddv)**
 >
-> Help fund IEC standards, additional decks and broader Mac testing.
+> Help us gather funds to acquire the necessary IEC standards documents, additional decks and broader Mac testing.
 > Every contribution supports development; downloading and testing remain free.
 
 > [!WARNING]
